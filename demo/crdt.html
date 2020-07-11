@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Demo yt-image-embeds</title>
+      <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+      <link rel="stylesheet" type='text/css' media='all' href="webslides.css">
+   </head>
+   <body>
+      <header role="banner">
+         <nav role="navigation">
+            <p>Demo</p>
+         </nav>
+      </header>
+      <main role="main">
+         <article id="webslides">
+            <section class="bg-apple aligncenter">
+               <div class="wrap">
+                <h3><strong>Demo Of yt Image embeding on static sites via JS.</strong></h3>
+                <p class="text-subtitle">All Images in this demo are loaded using yt videos only using front end js (sort of)</p>
+               </div>
+            </section>
+            <section class="bg-apple aligncenter">
+               <span class="background yt-image-embed" data-url="https://youtu.be/iEFcmfmdh2w" data-time="12m30s"></span>
+               <div class="alignleft">
+                  <h2 class="content-left">CRDT =></h2>
+               </div>
+            </section>
+            <section class="bg-apple aligncenter">
+               <span class="background yt-image-embed" data-url="https://youtu.be/vBU70EjwGfw" data-time="00:01:12"></span>
+            </section>
+            <section class="bg-apple aligncenter">
+               <div class="wrap">
+                  <div class="grid vertical-align">
+                     <div class="column">
+                        <figure class="yt-image-embed" data-url="https://youtu.be/vBU70EjwGfw" data-time="00:01:55"></figure>
+                     </div>
+                     <div class="column">
+                        <figure class="yt-image-embed" data-url="https://youtu.be/vBU70EjwGfw" data-time="1m56s"></figure>
+                     </div>
+                  </div>
+               </div>
+            </section>  
+            <section class="bg-apple aligncenter">
+               <div class="wrap">
+                  <div class="grid vertical-align">
+                     <div class="column">
+                        <figure class="yt-image-embed" data-url="https://youtu.be/vBU70EjwGfw" data-time="2m6s"></figure>
+                     </div>
+                     <div class="column">
+                        <figure class="yt-image-embed" data-url="https://youtu.be/vBU70EjwGfw" data-time="2m7s"></figure>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="bg-apple aligncenter">
+               <div class="wrap">
+                  <div class="grid vertical-align">
+                     <div class="column">
+                        <figure class="yt-image-embed" data-url="https://youtu.be/vBU70EjwGfw" data-time="2m11s"></figure>
+                     </div>
+                     <div class="column">
+                        <figure class="yt-image-embed" data-url="https://youtu.be/vBU70EjwGfw" data-time="2m12s"></figure>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="bg-apple aligncenter">
+               <span class="background yt-image-embed" style="width: calc(100% - 12rem);" data-url="https://youtu.be/vBU70EjwGfw" data-time="00:02:14"></span>
+               <div class="alignleft">
+                  <h2 class="content-right" style="color:#000">final state</h2>
+               </div>
+            </section>            
+            <section class="fullscreen">
+               <div class="grid ms">
+                  <div class="column">
+                     <figure class="aligncenter">
+                        <span class="aligncenter yt-image-embed" data-url="https://youtu.be/DEcwa68f-jY" data-time="13m5s"></span>
+                        <figcaption>
+                           <a href="https://youtu.be/DEcwa68f-jY">
+                           dotJS 2019 - James Long - CRDTs for Mortals
+                           </a>
+                        </figcaption>
+                     </figure>
+                  </div>
+                  <div class="column">
+                     <h2>Some CRDT Types</h2>
+                     <p class="text-intro">Some of the data types extended to support crdt</p>
+                  </div>
+               </div>
+            </section>
+            <section class="aligncenter">
+               <div class="wrap">
+                  <h2><strong>End of Demo</strong></h2>
+               </div>
+            </section>
+         </article>
+      </main>
+      <script src="webslides.min.js"></script>
+      <script src="yt_image_embed.js"></script>
+      <script>
+        const myYtdlWorker = 'https://ytdl-cfworker.arjun11.workers.dev/';
+        const ytEmbedder = YTIE(myYtdlWorker);
+        ytEmbedder.loadAll();
+        window.ws = new WebSlides();
+      </script>
+   </body>
+</html>

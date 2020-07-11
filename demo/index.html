@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yt-image-embed</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' media='all' href="demo/webslides.css">
+</head>
+<body>
+      <main role="main">
+        <article id="webslides">
+            <section class="slide-top">
+              <header>
+                <div class="wrap">
+                  <h3><strong>Youtube image embedding</strong></h3>
+                  <p>This library allows developers to embed images from youtube video directly using <em>Video Link</em> and <em>Timestamps</em></p>
+                </div>
+              </header>
+                <div class="wrap">
+                  <div class="grid vertical-align">
+                    <div class="column">                      
+                      <p class="text-context">Library Needs a cors proxy to work. By default it uses <a href="https://github.com/awesome-arjun11/CORS-yt">CORS-yt cloudflare workers</a> <br>Add <span class="code-comment">.yt-image-embed</span> class and <span class="code-comment">data-</span> attributes</p>
+                      <ul class="description">
+                          <li><span class="text-label">data-url:</span>(Required) url of youtube video</li>
+                          <li><span class="text-label">data-time:</span>(Required) video timestamp of frame to embed. eg values 5h1m12s, 05:01:12</li>
+                          <li><span class="text-label">data-width:</span>(Optional) defaults to parent container width or screen width</li>
+                          <li><span class="text-label">data-height:</span>(Optional) calculates using aspect ratio of video if not present</li>
+                      </ul>
+                    </div>
+                    <div class="column">
+                      <p class="text-context">Code Example:</p>
+                      <pre><span class="code-comment">&lt;!-- image at 11 minutes and 17 seconds with width of 600px --&gt;</span>
+&lt;div data-url="https://youtu.be/0if71HOyVjY" data-time="11m17s" data-width="600"&gt;&lt;/div&gt;
+ 
+<span class="code-comment">&lt;!-- Include Library --&gt;</span>
+&lt;script src="ytimage-embeds.js"&gt;&lt;/script&gt;
+
+<span class="code-comment">&lt;!-- Run --&gt;</span>
+&lt;script&gt;
+<span class="code-comment">// worker hosted with free plan. use own for availability.</span>
+const myYtdlWorker = 'https://ytdl-cfworker.arjun11.workers.dev/';<span class="code-comment">// checkout ytdl-cfworker to host your own</span>
+let ytEmbedder = YTIE(myYtdlWorker);
+ytEmbedder.loadAll();
+&lt;/script&gt;
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+            </section>
+            <section class="bg-apple aligncenter">
+                <div class="wrap">
+                  <p class="text-landing"><a href="demo/crdt.html">Click here to see demo</a></p>
+                </div>
+            </section>          
+        </article>
+      </main>
+    <script src="demo/webslides.min.js"></script>
+     <script>
+      window.ws = new WebSlides();
+    </script>
+</body>
+</html>
