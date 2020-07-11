@@ -1,0 +1,36 @@
+{
+  "name": "yt-image-embed",
+  "version": "1.0.0",
+  "description": "Embed Images from youtube video using timestamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awesome-arjun11/yt-image-embed.git"
+  },
+  "keywords": [
+    "youtube",
+    "image",
+    "embeding"
+  ],
+  "author": "Arjun Singh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/awesome-arjun11/yt-image-embed/issues"
+  },
+  "homepage": "https://github.com/awesome-arjun11/yt-image-embed#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/plugin-transform-runtime": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/runtime": "^7.10.3",
+    "@rollup/plugin-babel": "^5.0.4",
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-node-resolve": "^8.1.0",
+    "rollup": "^2.21.0",
+    "rollup-plugin-uglify": "^6.0.4"
+  }
+}
